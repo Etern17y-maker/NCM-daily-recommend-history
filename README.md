@@ -11,7 +11,7 @@
 
 ## 安装
 
-适配 Windows 版网易云音乐 3.1.42，要求 BetterNCM 1.3.3 或以上。清单允许 3.1.42 至 3.2.0 之前的 3.1 版本尝试加载。
+适配 Windows 版网易云音乐 3.1.42，要求 [BetterNCM 1.3.3 或以上](https://github.com/std-microblock/chromatic/tree/v2)。清单允许 3.1.42 至 3.2.0 之前的 3.1 版本尝试加载。
 
 1. [下载 2.2 插件包（.plugin）](https://github.com/Etern17y-maker/NCM-daily-recommend-history/releases/download/2.2/daily-recommend-history-30-2.2.plugin)。也可以在 [Releases](https://github.com/Etern17y-maker/NCM-daily-recommend-history/releases/tag/2.2) 查看该版本。
 2. 完全退出网易云音乐，将插件包放入 BetterNCM 的 plugins 目录，默认路径为 C:\betterncm\plugins。升级时移出同一插件的旧包。
