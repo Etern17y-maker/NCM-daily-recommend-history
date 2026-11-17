@@ -1,0 +1,11 @@
+"use strict";
+const fs = require("node:fs");
+const path = require("node:path");
+const root = path.resolve(__dirname, "..");
+const code = ["core.js", "adapter.js", "calendar.js", "main.js"].map(name => fs.readFileSync(path.join(root, "src", name), "utf8")).join("\n\n");
+const dist = path.join(root, "dist");
+fs.mkdirSync(dist, { recursive: true });
+fs.writeFileSync(path.join(dist, "main.js"), code);
+fs.copyFileSync(path.join(root, "manifest.json"), path.join(dist, "manifest.json"));
+console.log("Built " + dist);
+
