@@ -7,5 +7,7 @@ const dist = path.join(root, "dist");
 fs.mkdirSync(dist, { recursive: true });
 fs.writeFileSync(path.join(dist, "main.js"), code);
 fs.copyFileSync(path.join(root, "manifest.json"), path.join(dist, "manifest.json"));
+const preview = path.join(root, "plugin", "preview.png");
+if (fs.existsSync(preview)) fs.copyFileSync(preview, path.join(dist, "preview.png"));
 console.log("Built " + dist);
 

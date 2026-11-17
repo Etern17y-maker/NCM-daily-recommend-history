@@ -31,6 +31,12 @@ python scripts/package.py --output release
 
 插件包和源码归档生成在 release 目录。2.2 已通过自动化测试、模拟页面交互测试和隔离的原生数据模型验证。
 
+## BetterNCM 插件商店
+
+插件库同步 `plugin/` 中的清单、构建产物和预览图。改动源码后，运行 `node scripts/build.js`，然后将 `dist/main.js` 和 `dist/manifest.json` 复制到 `plugin/`，与源码一起提交。
+
+![历史日推日历预览](plugin/preview.png)
+
 ## 上游与许可证
 
 本项目是 BetterNCM 的独立第三方插件。查看 [BetterNCM 组织仓库](https://github.com/orgs/BetterNCM/repositories?type=all) 和 [BetterNCM 插件框架](https://github.com/BetterNCM/js-framework)。

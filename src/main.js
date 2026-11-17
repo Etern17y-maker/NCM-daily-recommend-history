@@ -119,6 +119,25 @@
     const view = el("div");
     view.style.cssText = "padding:18px;line-height:1.8;max-width:760px";
     view.appendChild(el("h2", "日推本地记录"));
+    const links = el("p");
+    for (const [label, url] of [
+      ["查看源码", "https://github.com/Etern17y-maker/NCM-daily-recommend-history"],
+      ["反馈问题", "https://github.com/Etern17y-maker/NCM-daily-recommend-history/issues"]
+    ]) {
+      const link = el("a", label);
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.style.marginRight = "16px";
+      link.addEventListener("click", event => {
+        if (typeof betterncm !== "undefined" && betterncm.ncm && typeof betterncm.ncm.openUrl === "function") {
+          event.preventDefault();
+          betterncm.ncm.openUrl(url);
+        }
+      });
+      links.appendChild(link);
+    }
+    view.appendChild(links);
     const settings = Core.readSettings(localStorage);
     const autoClear = el("input");
     autoClear.type = "checkbox";
